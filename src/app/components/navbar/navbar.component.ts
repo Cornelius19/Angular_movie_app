@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(){}
+  public searchMovieTitle = '';
+
+  encodeMovieTitle(searchMovieTitle: string) : string{
+    return encodeURIComponent(searchMovieTitle);
+  }
 
 }

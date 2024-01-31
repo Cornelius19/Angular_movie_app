@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card mb-3" style="max-width: 540px;">
+        <div class="card mb-3" [routerLink]="['/details/'+movieId]" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../../../assets/images/cards.jpg" class="img-fluid rounded-start" alt="...">
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
+        <div class="card mb-3" [routerLink]="['/details/'+movieId]" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../../../assets/images/cards.jpg" class="img-fluid rounded-start">
@@ -84,7 +84,7 @@
         
             </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
+        <div class="card mb-3"[routerLink]="['/details/'+movieId]" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../../../assets/images/cards.jpg" class="img-fluid rounded-start">
@@ -113,7 +113,7 @@
     <hr>
 
     <div class="col-md-3">
-        <div class=" card">
+        <div class=" card" >
             <img src="../../../assets/images/cards.jpg" class="card-image">
             <div class="card-boby">
                 <h5 class="card-title"> Movie title</h5>
@@ -127,7 +127,7 @@
         </div>
     </div>
     <div class="col-md-3">
-        <div class=" card">
+        <div class=" card" [routerLink]="['/details/'+movieId]">
             <img src="../../../assets/images/cards.jpg" class="card-image">
             <div class="card-boby">
                 <h5 class="card-title"> Movie title</h5>
@@ -141,7 +141,7 @@
         </div>
     </div>
     <div class="col-md-3">
-        <div class=" card">
+        <div class=" card" [routerLink]="['/details/'+movieId]">
             <img src="../../../assets/images/cards.jpg" class="card-image">
             <div class="card-boby">
                 <h5 class="card-title"> Movie title</h5>
@@ -155,7 +155,7 @@
         </div>
     </div>
     <div class="col-md-3">
-        <div class=" card">
+        <div class=" card" [routerLink]="['/details/'+movieId]">
             <img src="../../../assets/images/cards.jpg" class="card-image">
             <div class="card-boby">
                 <h5 class="card-title"> Movie title</h5>

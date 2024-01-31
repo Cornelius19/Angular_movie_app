@@ -60,6 +60,11 @@
         <app-details-actors></app-details-actors>
     </div>
 </div>
+<div class="text-center">
+    <a class="btn btn-warning" [routerLink]="['/details/actors/'+movieId]" >
+        All actors
+    </a>
+</div>
 
 <hr>
 <br>
@@ -71,6 +76,11 @@
         <app-details-reviews></app-details-reviews>
     </div>
 </div>
+<div class="text-center">
+    <a class="btn btn-warning" [routerLink]="['/details/review/'+movieId]" >
+        All review
+    </a>
+</div>
 <hr>
 <br>
 
@@ -80,6 +90,12 @@
     <div class="col-md-12 text-center">
         <app-details-movies></app-details-movies>
     </div>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-warning" [routerLink]="['/details/movies/'+movieId]" >
+        View more
+    </a>
 </div>
 
 
