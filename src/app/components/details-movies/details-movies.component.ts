@@ -19,17 +19,10 @@ export class DetailsMoviesComponent implements OnInit {
 
   getSimilarMovies(){
     this.moviesService.getSimilarMovies().subscribe(
-      {
-        next: (data: any) => {
+        (data: any) => {
           this.similarMovies = data;
-        },
-        error: (error) => {
-          console.log("[getSimilarMovies] An error ocured: ",error)
-        },
-        complete: () => {
-          console.log("[getSimilarMovies] Is working fine!")
         }
-      })
+      )
   }
 
 }

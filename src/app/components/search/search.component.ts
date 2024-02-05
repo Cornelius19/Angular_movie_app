@@ -23,17 +23,9 @@ export class SearchComponent implements OnInit {
 
   searchMovies(){
     this.moviesService.searchMovies().subscribe(
-      {
-        next: (data) => {
+        (data) => {
           this.searchResult = data;
-        },
-        error: (error) => {
-          console.log("[searchMovies] An error ocured: ",error)
-        },
-        complete: () => {
-          console.log("[searchMovies] Is working fine!")
-        }
-      })
+        })
   }
 
 }

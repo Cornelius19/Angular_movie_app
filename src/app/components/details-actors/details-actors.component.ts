@@ -21,17 +21,10 @@ export class DetailsActorsComponent implements OnInit {
 
   loadActors(){
     this.moviesService.loadActors().subscribe(
-      {
-        next: (data: any) => {
+        (data: any) => {
           this.actors = data;
-        },
-        error: (error) => {
-          console.log("[loadActors] An error ocured: ",error)
-        },
-        complete: () => {
-          console.log("[loadActors] Is working fine!")
         }
-      })
+      )
   }
 
 }

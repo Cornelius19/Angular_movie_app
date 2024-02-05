@@ -7,6 +7,7 @@ import { DetailsComponent } from "../components/details/details.component";
 import { HomeComponent } from "../components/home/home.component";
 import { SearchComponent } from "../components/search/search.component";
 import { NotFoundComponent } from "../not-found/not-found.component";
+import { FeedbackComponent } from "../components/feedback/feedback.component";
 
 const routes: Routes = [
     {path:'',component: HomeComponent},
@@ -26,7 +27,7 @@ const routes: Routes = [
 
 
     {path:'search/:movieTitle', component: SearchComponent},
-    // {path:'feedback', component: FeedBackComponenet},
+    {path:'feedback', component: FeedbackComponent},
 
     //404 page for non existing URLs
     {path:'**', component: NotFoundComponent}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ProfitPipe } from './pipes/profit.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
 import { AppRoutesModule } from './modules/app.routes';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -24,6 +24,8 @@ import { MyIfDirective } from './directives/my-if.directive';
 // Import HTTP Client Module
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesService } from './services/movies.service';
+import { GlobalErrorHandlerService } from './services/global-error-handler.service';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,7 @@ import { MoviesService } from './services/movies.service';
     ModalComponent,
     DetailsActorsComponent,
     NotFoundComponent,
-
+    FeedbackComponent,
     //Pipes
     ProfitPipe,
     
@@ -55,11 +57,13 @@ import { MoviesService } from './services/movies.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
     ],
 
   providers: [
     provideClientHydration(),
-    MoviesService
+    MoviesService,
+    {provide: ErrorHandler, useClass: GlobalErrorHandlerService}
   ],
 
   bootstrap: [AppComponent]

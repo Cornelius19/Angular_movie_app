@@ -45,18 +45,10 @@ export class DetailsComponent implements OnInit, OnChanges, AfterContentInit, Af
 
   loadMovieSummary(){
     this.moviesService.loadMovieSummary().subscribe(
-      {
-        next: (data: any) => {
+        (data: any) => {
           this.stars = data.summary.stars;
           this.directors = data.summary.directors;
           this.genres = data.summary.genres;
-        },
-        error: (error) => {
-          console.log("[loadMovieSummary] An error ocured: ",error)
-        },
-        complete: () => {
-          console.log("[loadMovieSummary] Is working fine!")
-        }
       })
   }
 

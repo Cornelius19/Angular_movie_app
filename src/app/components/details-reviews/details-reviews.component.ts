@@ -21,17 +21,9 @@ export class DetailsReviewsComponent implements OnInit {
 
   getDetailReviews(){
     this.moviesService.getDetailReviews().subscribe(
-      {
-        next: (data) => {
+        (data) => {
           this.reviews = data;
-        },
-        error: (error) => {
-          console.log("[getDetailReviews] An error ocured: ",error)
-        },
-        complete: () => {
-          console.log("[getDetailReviews] Is working fine!")
-        }
-      })
+        })
   }
 
 }

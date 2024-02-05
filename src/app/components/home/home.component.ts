@@ -76,33 +76,33 @@ ngOnInit(): void {
 
 getFanFavoriteMovies(){
   this.moviesService.getFanFavoriteMovies().subscribe(
-  {
-    next: (data:any[]) => {
+  //{
+    /*next:*/ (data:any[]) => {
       this.fanFavoritesMovies = data
-    },
-    error: (error) =>
-    {
-      console.log("[getFanFavoritesMovies] Error loading fan favorites data: ", error);
-    },
-    complete: () => {
-      console.log("[getFanFavoritesMovies] Request completed successfuly");
-    }
-  }
+    }//,
+  //   error: (error) =>
+  //   {
+  //     console.log("[getFanFavoritesMovies] Error loading fan favorites data: ", error);
+  //   },
+  //   complete: () => {
+  //     console.log("[getFanFavoritesMovies] Request completed successfuly");
+  //   }
+  // }
   )
 }
 
 getSideMovies(){
-  this.moviesService.getSideMovies().subscribe({
-    next: (data:any[]) => {
+  this.moviesService.getSideMovies().subscribe(//{ (we don't need to use anymore local error handling because we implement it in a service named GloabalErrorHandlingService)
+    /*next:*/ (data:any[]) => {
       this.sideMovies = data
-    },
-    error: (error) =>
-    {
-      console.log("[getSideMovies]Error loading top movies: ", error);
-    },
-    complete: () => {
-      console.log("[getSideMovies] Request completed successfuly");
-    }
+    // },
+    // error: (error) =>
+    // {
+    //   console.log("[getSideMovies]Error loading top movies: ", error);
+    // },
+    // complete: () => {
+    //   console.log("[getSideMovies] Request completed successfuly");
+    // }
   }
   )
 }
