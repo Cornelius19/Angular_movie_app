@@ -1,4 +1,6 @@
 <div class="row">
+    <h2 *appMyIf="isActive">The data or the content is being reder by appMyIf</h2>
+    <!-- Carousel -->
     <div class="col-md-8">
         <div id="carouselExampleCaptions" class="carousel slide" style="max-width: 1620px;">
             <div class="carousel-indicators">
@@ -44,16 +46,19 @@
             </button>
         </div>
     </div>
+    <!-- Carousel -->
+
     <div class="col-md-4">
-        <div class="card mb-3" [routerLink]="['/details/'+movieId]" style="max-width: 540px;">
+        <div class="card mb-3"  style="max-width: 540px;"
+        *ngFor="let movie of sideMovies">
             <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="../../../assets/images/cards.jpg" class="img-fluid rounded-start" alt="...">
+                <div class="col-md-4" >
+                    <img [src]="movie.imageUrl" [routerLink]="['/details/'+movieId]" class="img-fluid rounded-start" >
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card .</p>
+                        <h5 class="card-title">{{movie.movieTitle}}</h5>
+                        <p class="card-text">{{movie.movieDetails}} .</p>
                         <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                         <p>
                             <a class="btn btn-warning">
@@ -64,109 +69,26 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3" [routerLink]="['/details/'+movieId]" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="../../../assets/images/cards.jpg" class="img-fluid rounded-start">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card </p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <p>
-                            <a class="btn btn-warning">
-                                <i class="bi bi-film"></i> Trailer
-                            </a>
-                        </p>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-        <div class="card mb-3"[routerLink]="['/details/'+movieId]" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="../../../assets/images/cards.jpg" class="img-fluid rounded-start">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card </p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <p>
-                            <a class="btn btn-warning">
-                                <i class="bi bi-film"></i> Trailer
-                            </a>
-                        </p>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-        
     </div>
 </div>
 <br>
+
 <div class="row">
     <h1>Fan favorites</h1>
     <hr>
 
-    <div class="col-md-3">
+    <div class="col-md-3" [routerLink]="['/details/'+movieId]" *ngFor="let movie of fanFavoritesMovies">
         <div class=" card" >
-            <img src="../../../assets/images/cards.jpg" class="card-image">
+            <img [src]="movie.imageUrl" class="card-image">
             <div class="card-boby">
-                <h5 class="card-title"> Movie title</h5>
-                <p class="card-text"> Movie actors</p>
+                <h5 class="card-title"> {{movie.movieTitile}}</h5>
+                <p class="card-text"> {{movie.movieActors}}</p>
             </div>
             <div class="card-footer text-center text-muted">
-                <span style="float:left"><i class="bi bi-calendar"></i> 2023 </span>
-                <span><i class="bi bi-star"></i> 9.5/10 </span>
-                <span style="float:right"><i class="bi bi-trophy"></i> 1 </span>
+                <span style="float:left"><i class="bi bi-calendar"></i> {{movie.year}} </span>
+                <span><i class="bi bi-star"></i> {{movie.rating}} </span>
+                <span style="float:right"><i class="bi bi-trophy"></i> {{movie.rank}} </span>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class=" card" [routerLink]="['/details/'+movieId]">
-            <img src="../../../assets/images/cards.jpg" class="card-image">
-            <div class="card-boby">
-                <h5 class="card-title"> Movie title</h5>
-                <p class="card-text"> Movie actors</p>
-            </div>
-            <div class="card-footer text-center text-muted">
-                <span style="float:left"><i class="bi bi-calendar"></i> 2023 </span>
-                <span><i class="bi bi-star"></i> 9.5/10 </span>
-                <span style="float:right"><i class="bi bi-trophy"></i> 1 </span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class=" card" [routerLink]="['/details/'+movieId]">
-            <img src="../../../assets/images/cards.jpg" class="card-image">
-            <div class="card-boby">
-                <h5 class="card-title"> Movie title</h5>
-                <p class="card-text"> Movie actors</p>
-            </div>
-            <div class="card-footer text-center text-muted">
-                <span style="float:left"><i class="bi bi-calendar"></i> 2023 </span>
-                <span><i class="bi bi-star"></i> 9.5/10 </span>
-                <span style="float:right"><i class="bi bi-trophy"></i> 1 </span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class=" card" [routerLink]="['/details/'+movieId]">
-            <img src="../../../assets/images/cards.jpg" class="card-image">
-            <div class="card-boby">
-                <h5 class="card-title"> Movie title</h5>
-                <p class="card-text"> Movie actors</p>
-            </div>
-            <div class="card-footer text-center text-muted">
-                <span style="float:left"><i class="bi bi-calendar"></i> 2023 </span>
-                <span><i class="bi bi-star"></i> 9.5/10 </span>
-                <span style="float:right"><i class="bi bi-trophy"></i> 1 </span>
-            </div>
-        </div>
-    </div>
-
 </div>

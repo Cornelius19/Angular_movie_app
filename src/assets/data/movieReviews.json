@@ -1,0 +1,23 @@
+[
+  {
+    "rate": 7.35,
+    "review": "This p tag is gonna to have the review descripion, sometimes it can be very long that is why we use an",
+    "author": "Review author 1",
+    "usefulCount": 100,
+    "totalCount": 120
+  },
+  {
+    "rate": 7.6,
+    "review": "This p tag is gonna to have the review descripion, sometimes it can be very long that is why we use an",
+    "author": "Review author 2",
+    "usefulCount": 50,
+    "totalCount": 120
+  },
+  {
+    "rate": 7.7,
+    "review": "This p tag is gonna to have the review descripion, sometimes it can be very long that is why we use an",
+    "author": "Review author 3",
+    "usefulCount": 70,
+    "totalCount": 120
+  }
+]

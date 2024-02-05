@@ -1,0 +1,17 @@
+[
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie 1",
+    "movieDetails": "This is the short description"
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie 2",
+    "movieDetails": "This is the short description"
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie 3",
+    "movieDetails": "This is the short description"
+  }
+]

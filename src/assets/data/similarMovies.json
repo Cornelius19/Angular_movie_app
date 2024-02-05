@@ -1,0 +1,52 @@
+[
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #1",
+    "rate": 10
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #2",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #3",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #4",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #5",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #6",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #7",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #8",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #9",
+    "rate": 9
+  },
+  {
+    "imageUrl": "../../../assets/images/cards.jpg",
+    "movieTitle": "Movie #10",
+    "rate": 9
+  }
+]

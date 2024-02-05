@@ -17,6 +17,13 @@ import { ProfitPipe } from './pipes/profit.pipe';
 import { FormsModule } from '@angular/forms';
 import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
 import { AppRoutesModule } from './modules/app.routes';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HeaderDirective } from './directives/header.directive';
+import { MyIfDirective } from './directives/my-if.directive';
+
+// Import HTTP Client Module
+import { HttpClientModule } from '@angular/common/http';
+import { MoviesService } from './services/movies.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +39,14 @@ import { AppRoutesModule } from './modules/app.routes';
     LoaderComponent,
     ModalComponent,
     DetailsActorsComponent,
+    NotFoundComponent,
 
     //Pipes
-    ProfitPipe
+    ProfitPipe,
+    
+    //Directives
+    HeaderDirective,
+    MyIfDirective,
   ],
 
   imports: [
@@ -42,10 +54,12 @@ import { AppRoutesModule } from './modules/app.routes';
     AppRoutesModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ],
 
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    MoviesService
   ],
 
   bootstrap: [AppComponent]

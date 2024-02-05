@@ -17,31 +17,25 @@
                 <div class="card">
                     <div class="card-header"> Stars
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Star 1 Name</li>
-                            <li class="list-group-item">Star 2 Name</li>
-                            <li class="list-group-item">Star 3 Name</li>
+                            <li class="list-group-item" *ngFor="let star of stars">{{star}}</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header"> Stars
+                    <div class="card-header"> Directors
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Star 1 Name</li>
-                            <li class="list-group-item">Star 2 Name</li>
-                            <li class="list-group-item">Star 3 Name</li>
+                            <li class="list-group-item" *ngFor="let director of directors">{{director}}</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header"> Stars
+                    <div class="card-header"> Genres
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Star 1 Name</li>
-                            <li class="list-group-item">Star 2 Name</li>
-                            <li class="list-group-item">Star 3 Name</li>
+                            <li class="list-group-item" *ngFor="let genre of genres">{{genre}}</li>
                         </ul>
                     </div>
                 </div>
@@ -100,3 +94,7 @@
 
 
 <br>
+
+<!-- Start nested components load -->
+<!-- <router-outlet></router-outlet> -->
+<!-- End Nested Components load -->

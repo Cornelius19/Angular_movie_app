@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "imageUrl": "../../../assets/images/cards.jpg",
+        "title": "Movie #1 Title",
+        "description": "description of the movie",
+        "trailerLink": "#exampleModal",
+        "detailsLink": "/details/1"
+    },
+    {
+        "id" : 2,
+        "imageUrl": "../../../assets/images/cards.jpg",
+        "title": "Movie #2 Title",
+        "description": "description of the movie",
+        "trailerLink": "#exampleModal",
+        "detailsLink": "/details/1"
+    },
+    {
+        "id" : 3,
+        "imageUrl": "../../../assets/images/cards.jpg",
+        "title": "Movie #3 Title",
+        "description": "description of the movie",
+        "trailerLink": "#exampleModal",
+        "detailsLink": "/details/1"
+    },
+    {
+        "id" : 4,
+        "imageUrl": "../../../assets/images/cards.jpg",
+        "title": "Movie #4 Title",
+        "description": "description of the movie",
+        "trailerLink": "#exampleModal",
+        "detailsLink": "/details/1"
+    }
+]
