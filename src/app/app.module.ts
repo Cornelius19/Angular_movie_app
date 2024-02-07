@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesService } from './services/movies.service';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { AuthModule } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,15 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    AuthModule.forRoot({
+      domain:'cornelius.eu.auth0.com',
+      clientId:'aPwT03EVY5YIuuW1UC3sTUStqphHn5v9',
+      authorizationParams:{
+        redirect_uri: window.location.origin
+      }
+    })
     ],
 
   providers: [

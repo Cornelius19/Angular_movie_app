@@ -8,17 +8,27 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/"><i class="bi bi-house" ></i> Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="/"><i class="bi bi-house"></i> Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/feedback"><i class="bi bi-chat-dots" ></i> Feedback</a>
+          <a class="nav-link" routerLink="/feedback"><i class="bi bi-chat-dots"></i> Feedback</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchMovieTitle" [ngModelOptions]="{standalone: true}">
-        <button class="btn btn-outline-success" type="submit" [routerLink]="['/search/'+ searchMovieTitle]">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+          [(ngModel)]="searchMovieTitle" [ngModelOptions]="{standalone: true}">
+        <button class="btn btn-outline-success" type="submit"
+          [routerLink]="['/search/'+ searchMovieTitle]">Search</button>
         <!-- <button class="btn btn-outline-primary" >LogIn</button> -->
       </form>
+      <div class="d-flex">
+        <button class="btn btn-outline-primary" *ngIf="!(auth.isAuthenticated$ | async) else logoutButton"
+          (click)="auth.loginWithPopup()"><i class="bi bi-box-arrow-in-right">Log in</i></button>
+        <ng-template #logoutButton>
+          <button class="btn btn-outline-danger" *ngIf="(auth.isAuthenticated$ | async)" (click)="auth.logout()"><i
+              class="bi bi-box-arrow-in-right">Log out</i></button>
+        </ng-template>
+      </div>
     </div>
   </div>
 </nav>
