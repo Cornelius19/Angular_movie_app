@@ -17,7 +17,7 @@ import { ProfitPipe } from './pipes/profit.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
 import { AppRoutesModule } from './modules/app.routes';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderDirective } from './directives/header.directive';
 import { MyIfDirective } from './directives/my-if.directive';
 
@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesService } from './services/movies.service';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-import { AuthModule } from '@auth0/auth0-angular';
+import { AuthGuard, AuthModule } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -72,7 +72,8 @@ import { AuthModule } from '@auth0/auth0-angular';
   providers: [
     provideClientHydration(),
     MoviesService,
-    {provide: ErrorHandler, useClass: GlobalErrorHandlerService}
+    {provide: ErrorHandler, useClass: GlobalErrorHandlerService},
+    AuthGuard
   ],
 
   bootstrap: [AppComponent]

@@ -6,8 +6,10 @@ import { DetailsReviewsComponent } from "../components/details-reviews/details-r
 import { DetailsComponent } from "../components/details/details.component";
 import { HomeComponent } from "../components/home/home.component";
 import { SearchComponent } from "../components/search/search.component";
-import { NotFoundComponent } from "../not-found/not-found.component";
+import { NotFoundComponent } from "../components/not-found/not-found.component";
 import { FeedbackComponent } from "../components/feedback/feedback.component";
+import { AuthGuard } from "@auth0/auth0-angular";
+import { NotAuthorizedComponent } from "../components/not-authorized/not-authorized.component";
 
 const routes: Routes = [
     {path:'',component: HomeComponent},
@@ -27,10 +29,13 @@ const routes: Routes = [
 
 
     {path:'search/:movieTitle', component: SearchComponent},
-    {path:'feedback', component: FeedbackComponent},
+    {path:'feedback', component: FeedbackComponent,canActivate:[AuthGuard]},
 
     //404 page for non existing URLs
-    {path:'**', component: NotFoundComponent}
+    {path:'**', component: NotFoundComponent},
+
+    //401
+    {path:'401', component:NotAuthorizedComponent}
 ]
 
 @NgModule({

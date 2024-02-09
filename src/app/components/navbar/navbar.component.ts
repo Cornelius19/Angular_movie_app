@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -6,15 +6,25 @@ import { AuthService } from '@auth0/auth0-angular';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
-  constructor(public auth:AuthService){
-    
+export class NavbarComponent implements OnInit {
+  constructor(public auth:AuthService){}
 
-  }
+  public loggedInUser: any;
+
+
   public searchMovieTitle = '';
 
   encodeMovieTitle(searchMovieTitle: string) : string{
     return encodeURIComponent(searchMovieTitle);
+  }
+
+  ngOnInit(): void {
+    if(this.auth){
+      this.auth.user$.subscribe((data) => {
+        this.loggedInUser = data;
+        console.log('Legged user: ', this.loggedInUser);
+      })
+    }
   }
 
 }
